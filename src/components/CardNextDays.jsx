@@ -32,7 +32,7 @@ export default function CardNextDays(props) {
 
     return (
         <>
-            <div className="bg-white bg-opacity-50 p-4 rounded-lg text-black mb-8 flex flex-col gap-4 lg:flex-row lg:flex-wrap md:flex-row md:flex-wrap">
+            <div className="bg-white bg-opacity-50 p-4 rounded-lg text-black mb-8 flex flex-col gap-4 animate__animated animate__bounceInLeft lg:flex-row lg:flex-wrap md:flex-row md:flex-wrap">
                 {listNextDays}
             </div>
         </>

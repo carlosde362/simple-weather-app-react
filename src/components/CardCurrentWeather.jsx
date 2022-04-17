@@ -12,7 +12,7 @@ export default function CardCurrentWeather(props) {
         )
     }
     return (
-        <div className="bg-white bg-opacity-50 p-4 rounded-lg text-black flex flex-col gap-4 items-center w-auto">
+        <div className="bg-white bg-opacity-50 p-4 rounded-lg text-black flex flex-col gap-4 items-center w-auto animate__animated animate__bounceInDown">
             <h1 className="text-5xl">{props.weather.name}</h1>
             <span className="text-4xl capitalize">{props.weather.weather[0].description}</span>
             <div className='flex flex-row items-center'>
