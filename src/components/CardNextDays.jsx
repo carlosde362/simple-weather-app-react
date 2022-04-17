@@ -14,11 +14,11 @@ export default function CardNextDays(props) {
     }
     let dayOfWeek = new Date().getDay();
 
-    const listNextDays = props.weather.map((weatherDay) => {
+    const listNextDays = props.weather.map((weatherDay, index) => {
         const dayWeek = daysWeeks[dayOfWeek];
         dayOfWeek++;
         return (
-            <div className="flex flex-col justify-around items-center">
+            <div className="flex flex-col justify-around items-center" key={index}>
                 <span className="text-5xl sm:text-2xl">{dayWeek}</span>
                 <span className="capitalize">{weatherDay.weather[0].description}</span>
                 <div className="flex flex-row gap-3">
@@ -32,7 +32,7 @@ export default function CardNextDays(props) {
 
     return (
         <>
-            <div className="bg-white bg-opacity-50 p-4 rounded-lg text-black flex flex-row flex-wrap gap-4">
+            <div className="bg-white bg-opacity-50 p-4 rounded-lg text-black mb-8 flex flex-col gap-4 lg:flex-row lg:flex-wrap md:flex-row md:flex-wrap">
                 {listNextDays}
             </div>
         </>
