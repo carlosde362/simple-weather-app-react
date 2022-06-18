@@ -1,0 +1,8 @@
+version: "3.1"
+services:
+  simple-weather-react:
+    image: simple-weather-react:1
+    restart: always
+    ports:
+      - 80:80
+      - 443:443
