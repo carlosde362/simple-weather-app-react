@@ -1,12 +1,12 @@
 import axios from 'axios';
 
-const TOKEN_API = 'e2cd17e960a8e30856d9602c73d23626';
+const TOKEN_API = process.env.TOKEN_API_OPENWEATHER;
 const OPTIONS_API = 'units=metric&lang=es';
 const EXCLUDE_API = 'exclude=minutely,hourly,current,alerts,flags';
 const API_URL_BASE = 'https://api.openweathermap.org/data/2.5';
 
 export async function getCurrentWeatherFromCity(city) {
-    const query=`${API_URL_BASE}/weather?q=${city}&appid=${TOKEN_API}&${OPTIONS_API}`;
+    const query = `${API_URL_BASE}/weather?q=${city}&appid=${TOKEN_API}&${OPTIONS_API}`;
     const response = await axios.get(query);
     const weatherNextDays = await getWeatherNextFourDays(response.data.coord.lon, response.data.coord.lat);
     return {
