@@ -1,0 +1,6 @@
+[build]
+  command = "npm build"
+  publish = "build"
+
+[context.production.environment]
+  REACT_APP_TOKEN_API_OPENWEATHER = "From netlify.toml (REACT_APP_)"
