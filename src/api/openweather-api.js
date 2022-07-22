@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const TOKEN_API = process.env.TOKEN_API_OPENWEATHER;
+const TOKEN_API = process.env.REACT_APP_TOKEN_API_OPENWEATHER;
 const OPTIONS_API = 'units=metric&lang=es';
 const EXCLUDE_API = 'exclude=minutely,hourly,current,alerts,flags';
 const API_URL_BASE = 'https://api.openweathermap.org/data/2.5';
