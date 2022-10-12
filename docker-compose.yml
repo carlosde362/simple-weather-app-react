@@ -3,7 +3,7 @@ services:
   simple-weather-react:
     build:
       context: .
-    image: simple-weather-react:1
+    image: simple-weather-react:1.00
     container_name: simple-weather-react 
     restart: always
     ports:
